@@ -1,0 +1,241 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc; 
+    color: #333; 
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease; 
+}
+
+a {
+    color: #007bff; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; 
+}
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link, .dropdown-button {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #f7f9fc;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover, .dropdown-button:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+    min-width: 200px;
+    padding: 0.5rem 0;
+}
+
+.dropdown-content .dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content .dropdown-item:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    background: #f7f9fc;
+    color: #333;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form input[type="submit"], button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover, button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.post, .comment {
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.comment {
+    margin-left: 1rem;
+    border-left: 3px solid #007bff;
+    padding-left: 1rem;
+}
+
+.modules-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.module {
+    flex: 1 1 calc(33.333% - 1rem); 
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.module:hover {
+    transform: translateY(-5px); 
+}
+
+.module h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background: #f7f9fc;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #eaeaea;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form-container, main {
+        padding: 1.5rem;
+    }
+
+    .module {
+        flex: 1 1 100%; 
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 2px solid #007bff; 
+}
